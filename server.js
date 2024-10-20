@@ -10,7 +10,10 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://poll_game:921182@cluster0.3eckf.mongodb.net/poll_game');
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://poll_game:921182@cluster0.3eckf.mongodb.net/poll_game';
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected successfully'))
+    .catch((error) => console.error('MongoDB connection error:', error));
 
 // User schema and model
 const userSchema = new mongoose.Schema({
@@ -31,6 +34,13 @@ const Score = mongoose.model('Score', scoreSchema);
 // Register endpoint
 app.post('/api/auth/register', async (req, res) => {
     const { username, password } = req.body;
+
+    // Check if the username is already taken
+    const existingUser = await User.findOne({ username });
+    if (existingUser) {
+        return res.status(400).json({ message: 'Username already taken' });
+    }
+
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({ username, password: hashedPassword });
 
@@ -87,12 +97,13 @@ app.get('/api/scores', async (req, res) => {
     }
 });
 
-// Start server
-app.listen(3000, () => {
-    console.log('Server is running on http://localhost:3000');
-});
-
 // Redirect to register page on server start
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/register.html'); // Register page ko dikhana
+    res.sendFile(__dirname + '/public/register.html'); // Register page ko dikhana
+});
+
+// Start server
+const PORT = process.env.PORT || 3000; // Use the port provided by Render
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
