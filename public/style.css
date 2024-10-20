@@ -15,6 +15,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #game-container {
@@ -25,14 +28,7 @@ body {
   border-radius: 8px; /* Rounded corners */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
 }
-#game-container {
-  max-width: 600px; /* Max width for the game container */
-  margin: 50px auto; /* Centering the container */
-  padding: 20px; /* Padding inside the container */
-  background-color: #fff; /* Background color */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
-}
+
 
 #timer {
   font-size: 24px; /* Font size for the timer */
@@ -52,23 +48,23 @@ body {
   margin: 10px 0; /* Space between buttons */
   border: none; /* Removing border */
   border-radius: 5px; /* Rounded corners */
-  background-color: #f1f1f1; /* Background color for buttons */
+  background-color: #2d9f31; /* Background color for buttons */
   font-size: 18px; /* Font size for buttons */
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s; /* Transition effect */
 }
 
 #options button:hover {
-  background-color: #e0e0e0; /* Darker shade on hover */
+  background-color: #0d5910; /* Darker shade on hover */
 }
 
 /* You can add styles for correct and wrong answers if needed */
 .correct {
-  background-color: green; /* Green for correct answer */
+  background-color: #4CAF50; /* Green for correct answer */
 }
 
 .wrong {
-  background-color: red; /* Red for wrong answer */
+  background-color: rgb(231, 70, 70); /* Red for wrong answer */
 }
 
 form {
