@@ -48,7 +48,36 @@ let questions = [
     question: "<marquee> is used to create scrolling text.",
     options: ["True", "False"],
     correctAnswer: "True"
-  }
+  },
+  {
+    question: "The <_______> tag is used to insert a line break in HTML",
+    options: ["<br>", "<hr>"],
+    correctAnswer: "<br>"
+},
+
+{
+  question: "The attribute used to set the URL in an <a> tag is ________.",
+  options: ["href", "target"],
+  correctAnswer: "href"
+},
+
+{
+  question: "The <_______> tag is used to display images in HTML.",
+  options: ["<img>", "<pic>"],
+  correctAnswer: "<img>"
+},
+
+{
+  question: "<_______> are used to merge table rows.",
+  options: ["rowspan", "colspan"],
+  correctAnswer: "rowspan"
+},
+
+{
+  question: "You use <_______> to create an input field for a form.",
+  options: ["<input>", "<textarea>"],
+  correctAnswer: "<input>"
+}
   
 ];
 
