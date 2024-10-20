@@ -82,7 +82,7 @@ let questions = [
 ];
 
 let currentQuestionIndex = 0;
-let timeLeft = 20;
+let timeLeft = 30;
 let timerInterval;
 let score = 0;  // Initialize user score
 
@@ -141,7 +141,7 @@ function disableButtons() {
 async function nextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
-    timeLeft = 20;  // Reset the timer for the next question
+    timeLeft = 30;  // Reset the timer for the next question
     showQuestion();  // Show the next question
   } else {
     await submitScore(localStorage.getItem('username'), score); // Submit score after the last question
