@@ -1,23 +1,28 @@
 let questions = [
   {
-    question: "What is 2 + 2?",
-    options: ["1", "2", "3", "4"],
-    correctAnswer: "4"
+    question: "What is the correct way to define an attribute in an HTML tag?",
+    options: ["<tag attribute='value'>", "<tag attribute=value>", "<tag=attribute:value>3", "<tag>attribute='value'4"],
+    correctAnswer: "<tag attribute='value'>"
   },
   {
-    question: "What is the capital of France?",
-    options: ["Berlin", "Paris", "Rome", "Madrid"],
-    correctAnswer: "Paris"
+    question: "Which tag is used to underline text in HTML?",
+    options: ["<i>", "<u>", "<b>", "<underline>"],
+    correctAnswer: "<u>"
   },
   {
-    question: "What is the largest planet in our solar system?",
-    options: ["Earth", "Jupiter", "Mars", "Saturn"],
-    correctAnswer: "Jupiter"
+    question: "What is the purpose of the <hr> tag?",
+    options: ["To break a line", "To create a horizontal rule", "To highlight text", "To italicize text"],
+    correctAnswer: "To create a horizontal rule"
   },
   {
-    question: "Who is the author of the book 'To Kill a Mockingbird'?",
-    options: ["Harper Lee", "Harriet Tubman", "George Orwell", "Jane Austen"],
-    correctAnswer: "Harper Lee"
+    question: "Which tag is used for displaying an image in HTML?",
+    options: ["<img>", "<image>", "<src>", "<pic>"],
+    correctAnswer: "<img>"
+  },
+  {
+    question: "How do you create an ordered list in HTML?",
+    options: ["<ul>", "<ol>", "<li>", "<dl>"],
+    correctAnswer: "<img>"
   }
 ];
 
