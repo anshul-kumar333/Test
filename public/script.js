@@ -23,7 +23,33 @@ let questions = [
     question: "How do you create an ordered list in HTML?",
     options: ["<ul>", "<ol>", "<li>", "<dl>"],
     correctAnswer: "<img>"
+  },
+  {
+  question: "The <b> tag is used to bold text.",
+  options: ["True", "False"],
+  correctAnswer: "False"
+  },
+  {
+    question: "You can use <br> to create a line break.",
+    options: ["True", "False"],
+    correctAnswer: "True"
+  },
+  {
+    question: "The <i> tag is used for inline images.",
+    options: ["True", "False"],
+    correctAnswer: "False"
+  },
+  {
+    question: "<ul> is used for ordered lists.",
+    options: ["True", "False"],
+    correctAnswer: "False"
+  },
+  {
+    question: "<marquee> is used to create scrolling text.",
+    options: ["True", "False"],
+    correctAnswer: "True"
   }
+  
 ];
 
 let currentQuestionIndex = 0;
