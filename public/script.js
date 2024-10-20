@@ -22,12 +22,12 @@ let questions = [
   {
     question: "How do you create an ordered list in HTML?",
     options: ["<ul>", "<ol>", "<li>", "<dl>"],
-    correctAnswer: "<img>"
+    correctAnswer: "<ol>"
   },
   {
   question: "The <b> tag is used to bold text.",
   options: ["True", "False"],
-  correctAnswer: "False"
+  correctAnswer: "True"
   },
   {
     question: "You can use <br> to create a line break.",
@@ -77,6 +77,96 @@ let questions = [
   question: "You use <_______> to create an input field for a form.",
   options: ["<input>", "<textarea>"],
   correctAnswer: "<input>"
+},
+
+{
+  question: "What is the correct way to change the color of text in CSS?",
+  options: ["text-color: red;", "color: red;", "font-color: red;", "style-color: red;"],
+  correctAnswer: "color: red;"
+},
+
+{
+  question: "Which property is used to change the background color?",
+  options: ["bgcolor", "background", "background-color", "color"],
+  correctAnswer: "background-color"
+},
+
+{
+  question: "How do you make text bold using CSS?",
+  options: ["bgcolorfont-weight: bold;", "text-style: bold;", "text-bold: true;", "font-style: bold;"],
+  correctAnswer: "font-weight: bold;"
+},
+
+{
+  question: "What property is used to change the font size in CSS?",
+  options: ["font-weight", "font-size", "text-size", "size"],
+  correctAnswer: "font-size"
+},
+
+{
+  question: "How do you add space between the content and the border of an element?",
+  options: ["margin", "spacing", "padding", "border-spacing"],
+  correctAnswer: "padding"
+},
+
+{
+  question: "CSS stands for Cascading Style Sheets.",
+  options: ["True", "False"],
+  correctAnswer: "True"
+},
+
+{
+  question: "The margin property is used to add space inside an element.",
+  options: ["True", "False"],
+  correctAnswer: "False"
+},
+
+{
+  question: "You can set an image as a background in CSS.",
+  options: ["True", "False"],
+  correctAnswer: "True"
+},
+
+{
+  question: "The display property controls the visibility of elements.",
+  options: ["True", "False"],
+  correctAnswer: "False"
+},
+
+{
+  question: "The float property is used to align elements left or right.",
+  options: ["True", "False"],
+  correctAnswer: "True"
+},
+
+{
+  question: "The __________ property is used to make the text italic in CSS.",
+  options: ["font-style", "text-decoration"],
+  correctAnswer: "font-style"
+},
+
+{
+  question: "To create rounded corners, the __________ property is used.",
+  options: ["border-style", "border-radius"],
+  correctAnswer: "border-radius"
+},
+
+{
+  question: "You use the __________ property to change the width of an element.",
+  options: ["width", "size"],
+  correctAnswer: "width"
+},
+
+{
+  question: "The __________ property is used to change the height of an element.",
+  options: ["Height", "top"],
+  correctAnswer: "Height"
+},
+
+{
+  question: "To center text inside an element, use __________.",
+  options: ["text-align", "align-center"],
+  correctAnswer: "text-align"
 }
   
 ];

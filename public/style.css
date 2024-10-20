@@ -61,7 +61,7 @@ body {
 
 /* You can add styles for correct and wrong answers if needed */
 .correct {
-  background-color: #00ff08; /* Green for correct answer */
+  background-color: #fffb00; /* Green for correct answer */
 }
 
 .wrong {
