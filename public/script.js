@@ -112,7 +112,7 @@ function disableButtons() {
 async function nextQuestion() {
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
-    timeLeft = 5;  // Reset the timer for the next question
+    timeLeft = 20;  // Reset the timer for the next question
     showQuestion();  // Show the next question
   } else {
     await submitScore(localStorage.getItem('username'), score); // Submit score after the last question
