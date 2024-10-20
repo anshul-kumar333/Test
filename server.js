@@ -30,9 +30,9 @@ const Score = mongoose.model('Score', scoreSchema);
 
 // Register endpoint
 app.post('/api/auth/register', async (req, res) => {
-    const { username, password, fatherName, batchTiming } = req.body;
+    const { username, password } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
-    const user = new User({ username, password: hashedPassword, fatherName, batchTiming });
+    const user = new User({ username, password: hashedPassword });
 
     try {
         await user.save();

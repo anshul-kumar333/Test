@@ -159,15 +159,5 @@ async function submitScore(username, score) {
   });
 }
 
-// Update registration form submission
-const response = await fetch('/api/auth/register', {
-  method: 'POST',
-  headers: {
-      'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ username, password, fatherName: document.getElementById('fathername').value, batchTiming: document.getElementById('batchTiming').value }), // Add nayi fields
-});
-
-
 // Start the game when the page loads
 window.onload = showQuestion;
