@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Login</h1>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+    <script>
+        const form = document.getElementById('login-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const response = await fetch('/api/auth/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+
+            const data = await response.json();
+            if (data.token) {
+                // Check if the user has already played the game
+                const scoreResponse = await fetch(`/api/scores?username=${username}`);
+                if (scoreResponse.ok) {
+                    alert('You have already played the game.'); // Alert user
+                    return; // Do not redirect
+                }
+                localStorage.setItem('username', username); // Store username
+                // Redirect to the game page
+                window.location.href = 'index.html';
+            } else {
+                alert('Login failed!'); // Show error on login failure
+            }
+        });
+    </script>
+</body>
+</html>
