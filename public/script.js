@@ -53,7 +53,7 @@ let questions = [
 ];
 
 let currentQuestionIndex = 0;
-let timeLeft = 5;
+let timeLeft = 20;
 let timerInterval;
 let score = 0;  // Initialize user score
 
