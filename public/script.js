@@ -249,10 +249,10 @@ function checkAnswer(selectedOption, button) {
 
   // Change background color based on the answer
   if (selectedOption === correctAnswer) {
-    button.style.backgroundColor = 'green';  // Correct answer
+    button.style.backgroundColor = '#fffb00';  // Correct answer
     score++;  // Increment score for correct answer
   } else {
-    button.style.backgroundColor = 'red';  // Wrong answer
+    button.style.backgroundColor = 'rgb(231, 70, 70)';  // Wrong answer
     // Highlight the correct answer in green
     document.querySelectorAll('#options button').forEach(btn => {
       if (btn.innerText === correctAnswer) {
