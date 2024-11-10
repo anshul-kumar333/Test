@@ -278,5 +278,31 @@ async function submitScore(username, score) {
   });
 }
 
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+  });
+
+
+  document.addEventListener("keydown", function(e) {
+   
+    if (e.keyCode === 123) {
+      e.preventDefault();
+    }
+    
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {
+      e.preventDefault();
+    }
+    
+    if (e.ctrlKey && e.shiftKey && e.keyCode === 74) {
+      e.preventDefault();
+    }
+    
+    if (e.ctrlKey && e.keyCode === 85) {
+      e.preventDefault();
+    }
+  });
+
+
+
 // Start the game when the page loads
 window.onload = showQuestion;
